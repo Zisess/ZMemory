@@ -49,6 +49,18 @@ public void WriteMemory(long address, float value);
 public void WriteMemory(long address, double value);
 public void WriteMemory(long address, byte value);
 public void WriteMemory(long address, string value);
+
+memory.WriteMemory(address, 12345);
+memory.WriteMemory(address, 123.45f);
+```
+
+```cs
+using zissMemory;
+var memory = new zm();
+memory.SetProcess("processName");
+long moduleBaseAddress = memory.GetModuleBaseAddress("moduleName");
+memory.WriteMemory(address, 12345);
+memory.WriteMemory(address, 123.45f);
 ```
 
 The zissMemory class provides a simple and easy to use set of functions for accessing and manipulating the memory of a process in C#. Whether you are creating cheats or hacks for games, or modifying the behavior of a running process for debugging or testing purposes, this class can help you achieve your goals.
